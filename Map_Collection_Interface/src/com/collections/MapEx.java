@@ -1,7 +1,10 @@
 package com.collections;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
+import java.util.Map.Entry;
 
 public class MapEx {
 	public static void main(String[] args) {
@@ -35,5 +38,23 @@ public class MapEx {
 		System.out.println(m2.keySet());
 		System.out.println(m2.values());
 		System.out.println(m2.entrySet());
-	}
+		
+		
+		
+		//iterate map
+		Set set = m2.entrySet();
+		Iterator it = set.iterator();
+		while(it.hasNext()) {
+			Map.Entry m1 = (Entry) it.next(); 
+			System.out.println(m1.getKey()+" --- "+m1.getValue());
+			}
+		System.out.println("---------");
+		
+		
+		//iterate using for-each
+		for(Map.Entry<Integer,String> num : m2.entrySet()) {
+			System.out.println(num.getKey()+ " --- "+num.getValue());
+			}
+		
+		}
 }
