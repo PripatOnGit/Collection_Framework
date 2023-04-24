@@ -1,4 +1,4 @@
-package com.java;
+package com.collections;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -9,7 +9,7 @@ public class setEx3 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Set s3 = new HashSet();
+		Set<Integer> s3 = new HashSet<Integer>();
 		s3.add(20);
 		s3.add(10);
 		s3.add(30);
@@ -24,9 +24,12 @@ public class setEx3 {
 		while(itr.hasNext()) {
 		
 		
-		System.out.println(itr.next()); 
+		System.out.print(itr.next()); 
 		}
-				
+		System.out.println();
+		for(Integer val : s3 ) {
+			System.out.print(" "+val);
+		}
 
 	}
 

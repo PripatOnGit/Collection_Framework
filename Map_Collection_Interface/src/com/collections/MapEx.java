@@ -1,5 +1,7 @@
 package com.collections;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -55,6 +57,15 @@ public class MapEx {
 		for(Map.Entry<Integer,String> num : m2.entrySet()) {
 			System.out.println(num.getKey()+ " --- "+num.getValue());
 			}
+		System.out.println("---------");
+		//iterate map
+		ArrayList<Integer> keys = new ArrayList<Integer>(m2.keySet());  
+		ArrayList<String> values = new ArrayList<String>(m2.values());
+		for(int i=0;i<m2.size();i++) {
+			System.out.println(keys.get(i)+"----"+values.get(i));
+		}
+		System.out.println(keys+" ");
+		System.out.println(values+" ");
 		
 		}
 }
